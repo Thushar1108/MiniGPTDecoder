@@ -1,12 +1,6 @@
 # Mini-GPT Decoder
 
-A character-level GPT decoder built from scratch in TensorFlow, including manual implementation of masked multi-head self-attention, residual connections, and positional embeddings — trained on the TinyShakespeare dataset.
-
----
-
-## What this is
-
-This is not a wrapper around Keras's `MultiHeadAttention`. Every component — the scaled dot-product attention, causal masking, multi-head splitting, and positional encoding is written from first principles. The goal was to understand what a transformer decoder is actually doing, then verify that empirically against a bigram baseline.
+A character-level GPT decoder built from scratch in TensorFlow, including manual implementation of masked multi-head self-attention, residual connections, and positional embeddings — trained on the TinyShakespeare dataset. The goal was to understand what a transformer decoder is actually doing, then verify that empirically against a bigram baseline.
 
 ---
 
@@ -46,7 +40,7 @@ Dense(vocab_size) — logits, no softmax
 | Bigram baseline | 2.42 | 11.21 |
 | Mini-GPT (2 blocks, 10 epochs) | 2.08 | **8.00** |
 
-Mini-GPT achieves **29% lower perplexity** than the bigram baseline, trained on 100k of 892k available sequences due to compute constraints (RTX 3050). The gap is expected to widen significantly with full data — the key result is the architectural advantage, not the absolute number.
+Mini-GPT achieves **29% lower perplexity** than the bigram baseline, trained on 100k of 892k available sequences due to compute constraints (RTX 3050). The gap is expected to widen significantly with full data, the key result is the architectural advantage, not the absolute number.
 
 ### Why Mini-GPT beats bigram
 
