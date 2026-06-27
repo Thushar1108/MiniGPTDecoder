@@ -50,7 +50,7 @@ A bigram model predicts the next character by looking at exactly one character b
 
 ## Loss and perplexity curves
 
-![Loss and perplexity curves](loss_curves.png)
+![Loss and perplexity curves]![alt text](image.png)
 
 Both train and val perplexity cross below the bigram baseline (11.21) by epoch 2, confirming the model learns meaningful structure quickly. The train/val gap indicates mild overfitting at this data scale — expected given 100k training sequences.
 
@@ -58,7 +58,7 @@ Both train and val perplexity cross below the bigram baseline (11.21) by epoch 2
 
 ## Attention visualization
 
-![Layer 2 attention weights](attention_viz.png)
+![Layer 2 attention weights]![alt text](image-1.png)
 
 Attention weights from Layer 2, input: `"the king shall speak to his "`.
 
